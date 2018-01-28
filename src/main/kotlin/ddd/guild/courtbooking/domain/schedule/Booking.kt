@@ -1,6 +1,7 @@
 package ddd.guild.courtbooking.domain.schedule
 
 import ddd.guild.courtbooking.domain.DomainEntity
+import java.time.LocalDate
 import javax.persistence.Embedded
 import javax.persistence.Entity
 import javax.persistence.Id
@@ -12,6 +13,7 @@ class Booking(
         val id: String,
         val memberId: String,
         courtId: String,
+        val day: LocalDate,
         timeSlot: TimeSlot
 ) : DomainEntity {
 
